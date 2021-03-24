@@ -2,10 +2,10 @@
 #include "Data.h"
 using namespace std;
 
-int main ()
+int main()
 {
 	int choice;
-	
+
 	cout << "Create Graph [1] \n";
 	cout << "Traversal [2] \n";
 	cout << "Find Path [3] \n";
@@ -32,10 +32,10 @@ int main ()
 			cout << "* ******************************* *\n";
 			cout << "*         Adjacency List          *\n";
 			cout << "* ******************************* *\n";
-			
+
 			break;
 		case 2:
-			
+
 			cout << "* ******************************* *\n";
 			cout << "*         Adjacency Matrix        *\n";
 			cout << "* ******************************* *\n";
@@ -45,7 +45,7 @@ int main ()
 			break;
 		}
 		break;
-	case 2: 
+	case 2:
 
 		int traversalChoice;
 		cout << "* ******************************* *\n";
@@ -67,7 +67,7 @@ int main ()
 			cout << "*               DFS               *\n";
 			cout << "* ******************************* *\n";
 			break;
-		default :
+		default:
 			cout << "Invalid Input \n";
 			break;
 		}
@@ -94,8 +94,8 @@ int main ()
 		cout << "Invalid Input \n";
 		break;
 	}
-	
-	
+
+
 }
 
 
