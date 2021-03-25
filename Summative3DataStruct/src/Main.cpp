@@ -6,11 +6,11 @@ int main()
 {
 	int choice;
 
-	cout << "Create Graph [1] \n";
-	cout << "Traversal [2] \n";
-	cout << "Find Path [3] \n";
-	cout << "Path Cost [4] \n";
-	cout << "Exit [5] \n";
+	cout << "[1] Create Graph \n";
+	cout << "[2] Traversal \n";
+	cout << "[3] Find Path \n";
+	cout << "[4] Path Cost \n";
+	cout << "[5] Exit \n\n";
 	cout << "Enter choice: ";
 	cin >> choice;
 	switch (choice)
