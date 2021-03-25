@@ -1,7 +1,10 @@
 #include <iostream>
 #include "Data.h"
 using namespace std;
-
+void clear() 
+{ 
+	cout << "\033[H\033[J"; 
+}
 int main()
 {
 	int choice;
@@ -15,8 +18,9 @@ int main()
 	cin >> choice;
 	switch (choice)
 	{
+		
 	case 1:
-
+		clear();
 		int graphChoice;
 		cout << "* ******************************* *\n";
 		cout << "*           Create Graph          *\n";
@@ -29,13 +33,14 @@ int main()
 		switch (graphChoice)
 		{
 		case 1:
+			clear();
 			cout << "* ******************************* *\n";
 			cout << "*         Adjacency List          *\n";
 			cout << "* ******************************* *\n";
 
 			break;
 		case 2:
-
+			clear();
 			cout << "* ******************************* *\n";
 			cout << "*         Adjacency Matrix        *\n";
 			cout << "* ******************************* *\n";
@@ -46,7 +51,7 @@ int main()
 		}
 		break;
 	case 2:
-
+		clear();
 		int traversalChoice;
 		cout << "* ******************************* *\n";
 		cout << "*            Traversal            *\n";
@@ -58,11 +63,13 @@ int main()
 		cin >> traversalChoice;
 		switch (traversalChoice) {
 		case 1:
+			clear();
 			cout << "* ******************************* *\n";
 			cout << "*               BFS               *\n";
 			cout << "* ******************************* *\n";
 			break;
 		case 2:
+			clear();
 			cout << "* ******************************* *\n";
 			cout << "*               DFS               *\n";
 			cout << "* ******************************* *\n";
@@ -73,12 +80,14 @@ int main()
 		}
 		break;
 	case 3:
+		clear();
 		cout << "* ******************************* *\n";
 		cout << "*           Find Path             *\n";
 		cout << "* ******************************* *\n";
 		break;
 
 	case 4:
+		clear();
 		cout << "* ******************************* *\n";
 		cout << "*            Path Cost            *\n";
 		cout << "* ******************************* *\n";
