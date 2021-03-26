@@ -70,12 +70,12 @@ void Graph::populateMatrix()
 //Author : Padilla, Joshua Matthew C.
 void Graph::printGraph()
 {
-	string countryName[7]{ " Atlanta    ", " Austin     ", " Chicago    " , " Dallas     " 
-								, " Denver     ", " Houston    " , " Washington " };
+	string countryName[7]{ "Atlanta    ", "Austin     ", "Chicago    " , "Dallas     " 
+								, "Denver     ", "Houston    " , "Washington " };
 
 	int tmp = 0;
 	cout << "Adjacency List..." << endl << endl;
-	cout << "\t\t";
+
 
 	while (tmp < V) {
 
