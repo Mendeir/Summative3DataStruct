@@ -96,7 +96,7 @@ void Graph::printGraph()
 //Author: Padilla, Joshua Matthew C.
 void Graph::printGraph2()
 {
-	int names, j = 0;
+	int j = 0;
 	int i = 0;
 	int k = 0;
 

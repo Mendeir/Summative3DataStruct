@@ -39,7 +39,7 @@ int main ()
 						cout << "* ******************************* *\n";
 						cout << "*         Adjacency List          *\n";
 						cout << "* ******************************* *\n";
-						countries.populateGraph ();
+						countries.populateList ();
 						countries.printGraph ();
 						cin.get ();
 						break;
@@ -86,8 +86,9 @@ int main ()
 						cout << "[4] Denver \n";
 						cout << "[5] Houston \n";
 						cout << "[6] Washington \n";
-						cout << "Select a country: \n";
+						cout << "Select a country: ";
 						cin >> userCountry;
+						countries.BFS (userCountry);
 						break;
 
 					case 2:
@@ -104,8 +105,9 @@ int main ()
 						cout << "[4] Denver \n";
 						cout << "[5] Houston \n";
 						cout << "[6] Washington \n";
-						cout << "Select a country: \n";
+						cout << "Select a country: ";
 						cin >> userCountry;
+						countries.DFS (userCountry);
 						break;
 					default:
 						cout << "Invalid Input \n";
