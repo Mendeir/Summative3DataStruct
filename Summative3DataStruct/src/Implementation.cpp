@@ -5,6 +5,7 @@ using namespace std;
 
 Graph::Graph (int x)
 {
+		
 	V = x;
 	adj = new list <int> [V];
 	adj2 = new int* [V];
@@ -21,40 +22,119 @@ void Graph::addEdge (int u, int v)
 	adj [u].push_back (v);
 }
 
+//Author: Padilla, Joshua Matthew C.
+void Graph::populateGraph()
+{
+	//Edges for AdjecencyList
+	addEdge(0, 6);
+	addEdge(0, 5);
+	addEdge(1, 3);
+	addEdge(1, 5);
+	addEdge(2, 4);
+	addEdge(3, 1);
+	addEdge(3, 2);
+	addEdge(3, 4);
+	addEdge(4, 0);
+	addEdge(4, 2);
+	addEdge(5, 0);
+	addEdge(6, 0);
+	addEdge(6, 3);
+}
+
 void Graph::addEdge2 (int u, int v)
 {
 	adj2 [u][v] = 1;
 }
 
-// A utility function to print the adjacency list 
-// representation of graph 
-void Graph::printGraph ()
+//Author: Padilla, Joshua Matthew C.
+void Graph::populateMatrix()
 {
-	cout << "Adjacency List..." << endl;
-	for (int v = 0; v < V; ++v)
-	{
-		cout << "V[" << v << "]";
-		for (auto x : adj [v])
-			cout << " -> " << x;
-		cout << endl;
-	}
+	//Edges for Matrix Graph
+	addEdge2(0, 6);
+	addEdge2(0, 5);
+	addEdge2(1, 3);
+	addEdge2(1, 5);
+	addEdge2(2, 4);
+	addEdge2(3, 1);
+	addEdge2(3, 2);
+	addEdge2(3, 4);
+	addEdge2(4, 0);
+	addEdge2(4, 2);
+	addEdge2(5, 0);
+	addEdge2(6, 0);
+	addEdge2(6, 3);
 }
+// A utility function to print the adjacency list 
+// representation of graph
 
-void Graph::printGraph2 ()
+//Author : Padilla, Joshua Matthew C.
+void Graph::printGraph()
 {
+	string countryName[7]{ " Atlanta    ", " Austin     ", " Chicago    " , " Dallas     " 
+								, " Denver     ", " Houston    " , " Washington " };
+
+	int tmp = 0;
+	cout << "Adjacency List..." << endl << endl;
+	cout << "\t\t";
+
+	while (tmp < V) {
+
+		//PRINT all the country Name
+		for (int i = 0; i < V; i++) {
+			cout << countryName[tmp];
+			++tmp;
+		//Output the connection of all edges
+			for (auto x : adj[i])
+				cout << "\t-> " << countryName[x];
+			cout << endl;
+
+		}
+		
+	}
+
+}
+//Author: Padilla, Joshua Matthew C.
+void Graph::printGraph2()
+{
+	int names, j = 0;
+	int i = 0;
+	int k = 0;
+
+	string countryName[7]{" Atlanta", " Austin", " Chicago" , " Dallas" , " Denver", " Houston" , " Washington" };
 	cout << "Adjacency Matrix..." << endl << endl;
-	cout << "\t";
-	for (int i = 0; i < V; i++)
-		cout << "V[" << i << "]" << "\t";
-	cout << endl;
-	for (int i = 0; i < V; i++)
-	{
-		cout << "V[" << i << "]" << "\t";
-		for (int j = 0; j < V; j++)
-			cout << adj2 [i][j] << "\t";
-		cout << endl;
+	cout << "\t\t";
+
+	//if i is not equal to 7 it will output all the Country Name
+	while (i != 7){
+
+		cout << countryName[i];
+		cout << "[" << i << "]" << "\t";
+
+		i++;
 	}
 	cout << endl;
+
+
+	while (k < V){
+		
+		//Output the countryName
+		for ( i = 0; i < V; i++) {
+			cout << countryName[k];
+			cout << "[" << k << "]" << "\t";
+			k++;
+
+		//Output the edges in matrix per country
+			for (j = 0; j < V; j++)
+				cout << " " << adj2[i][j] << "\t\t";
+			cout << endl;
+			
+		}
+		
+		
+		
+	}
+		cout << endl;
+	
 }
 
 void Graph::DFSUtil (int v, bool visited [])
