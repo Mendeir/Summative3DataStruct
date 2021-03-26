@@ -115,6 +115,7 @@ int main ()
 						cout << "Invalid Input \n";
 						break;
 				}
+				cout << "Enter any key to continue..";
 				cin.get();
 				clear();
 				break;
