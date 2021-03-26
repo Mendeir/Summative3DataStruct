@@ -130,8 +130,6 @@ void Graph::printGraph2()
 			
 		}
 		
-		
-		
 	}
 		cout << endl;
 	
