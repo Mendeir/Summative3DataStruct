@@ -17,7 +17,7 @@ class Graph
 	public:
 	Graph (int);						     //All	
 	void addEdge (int u, int v);		     //All
-	void populateGraph();					//Programmer2 (Padilla, Joshua Matthew C.)
+	void populateList();					//Programmer2 (Padilla, Joshua Matthew C.)
 	void addEdge2 (int u, int v);			//Programmer2 (Padilla, Joshua Matthew C.)
 	void populateMatrix();					//Programmer2 (Padilla, Joshua Matthew C.)
 	void printGraph ();						 //All
