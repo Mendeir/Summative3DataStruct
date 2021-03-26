@@ -38,7 +38,7 @@ int main()
 				cout << "* ******************************* *\n";
 				cout << "*         Adjacency List          *\n";
 				cout << "* ******************************* *\n";
-				countries.populateGraph();
+				countries.populateList();
 				countries.printGraph();
 				break;
 			case 2:
@@ -71,6 +71,7 @@ int main()
 				cout << "* ******************************* *\n";
 				cout << "*               BFS               *\n";
 				cout << "* ******************************* *\n";
+				countries.BFS (0);
 				break;
 				
 			case 2:
@@ -78,6 +79,7 @@ int main()
 				cout << "* ******************************* *\n";
 				cout << "*               DFS               *\n";
 				cout << "* ******************************* *\n";
+				countries.DFS (3);
 				break;
 			default:
 				cout << "Invalid Input \n";

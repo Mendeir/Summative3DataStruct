@@ -135,12 +135,17 @@ void Graph::printGraph2()
 	
 }
 
+//Author: Adrianne Magracia
 void Graph::DFSUtil (int v, bool visited [])
 {
+	//Array for lookup table
+	string countryName [] { "Atlanta", "Austin", "Chicago" , "Dallas" , "Denver", "Houston" , "Washington" };
+
+
 	// Mark the current node as visited and 
 	// print it 
 	visited [v] = true;
-	cout << v << " ";
+	cout << countryName[v] << " ";
 
 	// Recur for all the vertices adjacent 
 	// to this vertex 
@@ -150,6 +155,7 @@ void Graph::DFSUtil (int v, bool visited [])
 			DFSUtil (*i, visited);
 }
 
+//Author: Adrianne Magracia
 // DFS traversal of the vertices reachable from v. 
 // It uses recursive DFSUtil() 
 void Graph::DFS (int v)
@@ -172,6 +178,7 @@ void Graph::DFS (int v)
 			cout << i << " ";
 }
 
+//Author: Adrianne Magracia
 void Graph::BFS (int s)
 {
 	// Mark all the vertices as not visited 
@@ -189,6 +196,7 @@ void Graph::BFS (int s)
 			cout << i << " ";
 }
 
+//Author: Adrianne Magracia
 void Graph::BFSUtil (int s, bool visited [])
 {
 	// Create a queue for BFS 
@@ -202,11 +210,17 @@ void Graph::BFSUtil (int s, bool visited [])
 	// vertices of a vertex 
 	list<int>::iterator i;
 
+	int flag = queue.size ();
+
 	while (!queue.empty ())
 	{
+		//Array for lookup table
+		string countryName [] { "Atlanta", "Austin", "Chicago" , "Dallas" , "Denver", "Houston" , "Washington" };
+
 		// Dequeue a vertex from queue and print it 
 		s = queue.front ();
-		cout << s << " ";
+		cout << countryName[s] << " ";
+
 		queue.pop_front ();
 
 		// Get all adjacent vertices of the dequeued 
