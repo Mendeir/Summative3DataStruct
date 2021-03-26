@@ -89,6 +89,7 @@ int main ()
 						cout << "Select a country: ";
 						cin >> userCountry;
 						countries.BFS (userCountry);
+						cin.get();
 						break;
 
 					case 2:
@@ -108,16 +109,17 @@ int main ()
 						cout << "Select a country: ";
 						cin >> userCountry;
 						countries.DFS (userCountry);
+						cin.get();
 						break;
 					default:
 						cout << "Invalid Input \n";
 						break;
 				}
+				cin.get();
+				clear();
 				break;
 			case 3:
-				cout << "* ******************************* *\n";
-				cout << "*          Exit Program           *\n";
-				cout << "* ******************************* *\n";
+				exit(1);
 				break;
 
 			default:
