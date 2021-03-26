@@ -23,7 +23,7 @@ void Graph::addEdge (int u, int v)
 }
 
 //Author: Padilla, Joshua Matthew C.
-void Graph::populateGraph()
+void Graph::populateList()
 {
 	//Edges for AdjecencyList
 	addEdge(0, 6);
